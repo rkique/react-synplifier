@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 
 //A form Class component that has an initialState variable
 class Form extends Component {
+
     initialState = {
         protocol: '',
         steps: [{job: "ugh"}, {job: "ugh2"}]
     }
-    
     state = this.initialState
 
     //an arrow function that runs whenever changes made to input
@@ -21,17 +21,20 @@ class Form extends Component {
         })
     }
 
-    //run handleSubmit, and then clear the Form (set to initial state)
+    //run handleSubmit, and maybe clear the Form by setting to initial state
     submitForm = () => {
         this.props.handleSubmit(this.state)
-        this.setState(this.initialState)
+
+        //don't clear the Form 
+        //this.setState(this.initialState)
     }
 
     render() {
-        const {protocol} = this.state;
-
         //returns an HTML form object with a name and a job from the state
         //this scope: refers to the Form class
+        const rows = 40;
+        const cols = 40;
+        const {protocol} = this.state;
 
         return (
             <form>
@@ -40,8 +43,8 @@ class Form extends Component {
                  type="text"
                  name="protocol"
                  id="protocol"
-                 rows = "10"
-                 cols = "30"
+                 rows = {rows}
+                 cols = {cols}
                  value={protocol}
                  onChange={this.handleChange} />
                  <input type="button" value="Submit" onClick={this.submitForm} />

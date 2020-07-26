@@ -4,8 +4,10 @@ import Form from './Form'
 
 class App extends Component {
     state = {
-        steps: [{job: "sterilize the workspace"}]
+        steps: [{job: "sterilize the workspace"}],
+        verbs: []
     }
+
     //returns a new array with a specified step removed
     //we're defining it here because we might want to do stuff with the steps that might not involve Table
     removeStep = (index) => {
@@ -13,11 +15,11 @@ class App extends Component {
         const newSteps = steps.filter((step, i) => {return i !== index})
         this.setState({steps: newSteps})
     }
-    //handleSubmit activates on the submit of the add-step form
+    //handleSubmit activates on the submit of the add-step form, updating the tabular representation
     handleSubmit = (state) => {
-        //an array of steps derived from the protocol
+        //using an array of steps derived from the protocol
         const protocolSteps = state.protocol.split("\n");
-        //construct objects with job params
+        //A stupid way to construct objects with Job params)
         var i; 
         var steps = []
         for(i = 0; i< protocolSteps.length; i++)
@@ -25,21 +27,26 @@ class App extends Component {
             steps.push({job: protocolSteps[i]})
         }
         //WOW: the spread operator "..." spreads steps out
-        this.setState({ steps: [...this.state.steps].concat(steps)})
+        this.setState({ steps: steps})
     }
 
-    //renders a simple table from Table.js
-    //this scope: the App itself
+    //this scope: the App
+    //Renders a HEADER, a FORM, and a TABLE
 
     render() {
         const {steps} = this.state
         return (
             <div className="container">
-                <h1> Synplifier v0.1: You Can Input Text and It Will Display Steps</h1>
-                 <Form handleSubmit={this.handleSubmit} />
-                <Table steps={steps} removeStep ={this.removeStep} addStep = {this.addStep}/>
+                <h1 style={{color: "red"}}>Synplifier v0.1</h1>
+                <div class="flex-row">
+                    <div class="flex-large">
+                    <Form handleSubmit={this.handleSubmit} style={{margin: "0 10px", visibility: "none"}}/>
+                    </div>
+                    <div class="flex-large">
+                    <Table steps={steps} removeStep ={this.removeStep} style={{margin: "0 10px"}} />
+                    </div>
+                </div>
             </div>
-            
         )
     }
 }
