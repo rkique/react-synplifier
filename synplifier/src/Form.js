@@ -3,9 +3,12 @@ import React, {Component} from 'react'
 //A form Class component that has an initialState variable
 class Form extends Component {
 
+    //initialState
+    //an empty protocol (text input by user)
+    //an empty set of steps (converted from protocol)
     initialState = {
         protocol: '',
-        steps: [{job: "ugh"}, {job: "ugh2"}]
+        steps: []
     }
     state = this.initialState
 

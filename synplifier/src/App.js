@@ -1,33 +1,35 @@
 import React, {Component} from 'react'
 import Table from './Table'
 import Form from './Form'
-
 class App extends Component {
     state = {
         steps: [{job: "sterilize the workspace"}],
         verbs: []
     }
 
-    //returns a new array with a specified step removed
-    //we're defining it here because we might want to do stuff with the steps that might not involve Table
+    //returns a new .steps with a specified step removed
     removeStep = (index) => {
         const {steps} = this.state
         const newSteps = steps.filter((step, i) => {return i !== index})
         this.setState({steps: newSteps})
     }
-    //handleSubmit activates on the submit of the add-step form, updating the tabular representation
+    
+    //activates on the submit of the text input to update the steps
     handleSubmit = (state) => {
-        //using an array of steps derived from the protocol
-        const protocolSteps = state.protocol.split("\n");
-        //A stupid way to construct objects with Job params)
+        //using an array of steps derived from the protocol: ['fill tube', 'mix tube', etc.]
+        let protocolSteps = state.protocol.split("\n");
+        protocolSteps = protocolSteps.filter(function(step) {
+            return step != ""
+          });
+        //A quick, possibly inefficient way to construct objects with Job params from the prtocolSteps
         var i; 
         var steps = []
         for(i = 0; i< protocolSteps.length; i++)
         {
             steps.push({job: protocolSteps[i]})
         }
-        //WOW: the spread operator "..." spreads steps out
-        this.setState({ steps: steps})
+        //update .steps with new derived steps
+        this.setState({ steps:steps})
     }
 
     //this scope: the App
