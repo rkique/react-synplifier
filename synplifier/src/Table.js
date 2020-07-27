@@ -17,6 +17,11 @@ const TableHeader = () => {
 const TableBody = (props) => {
     //uses the index as a KEY to access individual rows, and then lists the VALUES (step objects) out
     const rows = props.steps.map((row, index) => {
+        //for each vocab word
+        for (var i = 0; i< row.tags.length; i++)
+        {
+            
+        }
         return (
             <tr key={index}>
                 <td>{index+1}</td>

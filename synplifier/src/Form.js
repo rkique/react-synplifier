@@ -41,7 +41,7 @@ class Form extends Component {
 
         return (
             <form>
-                 <label htmlFor="protocol"> Copy paste in the steps, separated by a newline character or in a list format.</label>
+                 <label htmlFor="protocol"> Copy paste in the steps, separated by a newline character. Each separate step will be treated as an atomic action</label>
                  <textarea
                  type="text"
                  name="protocol"

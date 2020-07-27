@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import Table from './Table'
 import Form from './Form'
+import {findVocab} from './Vocab'
 class App extends Component {
     state = {
-        steps: [{job: "sterilize the workspace"}],
-        verbs: []
+        steps:
+             [
+            {job: "sterilize the workspace", tags: ["sterilize", "Sterilizing is cleaning the workspace with ethanol.", 0]}
+            ]
     }
 
     //returns a new .steps with a specified step removed
@@ -26,10 +29,11 @@ class App extends Component {
         var steps = []
         for(i = 0; i< protocolSteps.length; i++)
         {
-            steps.push({job: protocolSteps[i]})
+            //tags is a collection of 0+ [word,def, index] arrays
+            steps.push({job: protocolSteps[i], tags: findVocab(protocolSteps[i])})
         }
         //update .steps with new derived steps
-        this.setState({ steps:steps})
+        this.setState({steps:steps})
     }
 
     //this scope: the App
