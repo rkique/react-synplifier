@@ -31,8 +31,11 @@ const StepRow = (props) => {
             if(wordArray[i].toLowerCase() == props.step.tags[j][0])
             {
                 //append tag instead of text
-                tagsText.push(<mark style={{marginRight: "5px"}}>{wordArray[i]}</mark>)
-                var foundTag = true;
+                tagsText.push(
+                <div class="cardTooltip">{wordArray[i]}
+                <span class="tooltiptext">{props.step.tags[j][1]}</span>
+                </div>)
+                foundTag = true;
             }
         }
         if(foundTag == false)
