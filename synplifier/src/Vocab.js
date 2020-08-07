@@ -8,8 +8,10 @@ export const findVocab = (text) => {
         ,["suspend", "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage."]
         ,["aliquot", "Aliquoting is splitting a large amount of liquid into many smaller containers."]
         ,["lyophilize", "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes."]
+        
     ]
     var matches = []
+    //initial identification of matching words
     for(var i = 0; i<Vocabulary.length; i++)
     {
         var index = text.toLowerCase().indexOf(Vocabulary[i][0])

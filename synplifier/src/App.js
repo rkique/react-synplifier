@@ -3,10 +3,10 @@ import Table from './Table'
 import Form from './Form'
 import {findVocab} from './Vocab'
 class App extends Component {
-    state = {
+    state = {   
         steps:
              [
-            {job: "sterilize the workspace", tags: ["sterilize", "Sterilizing is cleaning the workspace with ethanol.", 0]}
+            {job: "sterilize the workspace", tags: [["sterilize", "Sterilizing is cleaning the workspace with ethanol.", 0]]}
             ]
     }
 
@@ -22,7 +22,7 @@ class App extends Component {
         //using an array of steps derived from the protocol: ['fill tube', 'mix tube', etc.]
         let protocolSteps = state.protocol.split("\n");
         protocolSteps = protocolSteps.filter(function(step) {
-            return step != ""
+            return step !== ""
           });
         //A quick, possibly inefficient way to construct objects with Job params from the prtocolSteps
         var i; 

@@ -1,39 +1,54 @@
 import React, {Component} from 'react'
 
-const Col1 = "Step Number";
-const Col2 = "Procedure";
 //a Simple component that displays the Table Headers.
 const TableHeader = () => {
-    return(
-        <thead>
-          <tr>
-            <th>{Col1}</th>
-            <th>{Col2}</th>
-          </tr>
-        </thead>)
+    return(<h1>Steps</h1>)
 }
 
 //a simple Table body component that returns steps and jobs.
-const TableBody = (props) => {
-    //uses the index as a KEY to access individual rows, and then lists the VALUES (step objects) out
-    const rows = props.steps.map((row, index) => {
-        //for each vocab word
-        for (var i = 0; i< row.tags.length; i++)
-        {
-            
-        }
-        return (
-            <tr key={index}>
-                <td>{index+1}</td>
-                <td>{row.job}</td>
-                <td>
-                    <button onClick={() => props.removeStep(index)}>delete</button>
-                </td>
-            </tr>
-        )
-    })
+const StepsTable = (props) => {
+    let steps = props.steps;
+    var rows = []
+    for (var i =0; i<steps.length; i++)
+    {
+        let step = steps[i];
+        rows.push(<StepRow key={i} step={step}/>);
+    }
+    return rows;
+}
 
-  return <tbody> {rows}</tbody>
+const StepRow = (props) => {
+    //create a tag for each term within the scope of each step
+    //return a step split up into tags and text
+    var tagsText = []
+    //tags: word, def, index
+    var wordArray = props.step.job.split(" ");
+    for (var i = 0; i< wordArray.length; i++)
+    {
+        var foundTag = false;
+        for(var j = 0; j<props.step.tags.length;j++)
+        { 
+            if(wordArray[i].toLowerCase() == props.step.tags[j][0])
+            {
+                //append tag instead of text
+                tagsText.push(<mark style={{marginRight: "5px"}}>{wordArray[i]}</mark>)
+                var foundTag = true;
+            }
+        }
+        if(foundTag == false)
+        {           
+            //since no tags were found, append text
+             tagsText.push(<p style={{marginRight: "5px"}}>{wordArray[i]}</p>)    
+        }
+    }
+    return <div style={{display:'flex'}}>{tagsText}</div>
+
+}
+
+function HighlightedComponent(text, highlight) {
+    // Split text on highlight term, include term itself into parts, ignore case
+    const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
+    return <span>{parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <mark>{part}</mark> : part)}</span>;
 }
   
 
@@ -44,10 +59,10 @@ const Table = (props) => {
     //the props are coming from the params we pass into Table 
     const {steps, removeStep} = props
     return (  
-        <table>
+            <div>
             <TableHeader />
-            <TableBody steps={steps} removeStep={removeStep}/>
-        </table>
+            <StepsTable steps={steps} removeStep={removeStep}/>
+            </div>
     )
 }
 
