@@ -43,12 +43,12 @@ class App extends Component {
         const {steps} = this.state
         return (
             <div className="container">
-                <h1 style={{color: "red"}}>Synplifier v0.1</h1>
-                <div class="flex-row">
-                    <div class="flex-large">
+                <h1 style={{color: "red"}}>Synplifier v0.2</h1>
+                <div className="flex-row">
+                    <div className="flex-large">
                     <Form handleSubmit={this.handleSubmit} style={{margin: "0 10px", visibility: "none"}}/>
                     </div>
-                    <div class="flex-large">
+                    <div className="flex-large">
                     <Table steps={steps} removeStep ={this.removeStep} style={{margin: "0 10px"}} />
                     </div>
                 </div>

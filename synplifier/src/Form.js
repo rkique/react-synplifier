@@ -35,7 +35,7 @@ class Form extends Component {
     render() {
         //returns an HTML form object with a name and a job from the state
         //this scope: refers to the Form class
-        const rows = 40;
+        const rows = 33;
         const cols = 40;
         const {protocol} = this.state;
 
@@ -46,6 +46,7 @@ class Form extends Component {
                  type="text"
                  name="protocol"
                  id="protocol"
+                 style={{resize: "none", wrap: "hard"}}
                  rows = {rows}
                  cols = {cols}
                  value={protocol}

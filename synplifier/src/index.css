@@ -1,7 +1,17 @@
 
+#tagsText{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-
-
+.stepsTable{
+  width: 500px;
+  overflow-wrap: break-word;
+}
+.textarea{
+  resize: none;
+}
 .cardTooltip{
   position: relative;
   display: inline-block;

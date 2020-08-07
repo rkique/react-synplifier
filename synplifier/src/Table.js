@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
 
-//a Simple component that displays the Table Headers.
+//a table header ... idk if this might become useful 
 const TableHeader = () => {
-    return(<h1>Steps</h1>)
 }
 
-//a simple Table body component that returns steps and jobs.
+//a StepsTable that displays StepRows in different rows
 const StepsTable = (props) => {
     let steps = props.steps;
     var rows = []
@@ -14,9 +13,10 @@ const StepsTable = (props) => {
         let step = steps[i];
         rows.push(<StepRow key={i} step={step}/>);
     }
-    return rows;
+    return <div className="stepsTable">{rows}</div>;
 }
 
+//a StepRow is a collection of tags and text objects (words) in a row (5px margin)
 const StepRow = (props) => {
     //create a tag for each term within the scope of each step
     //return a step split up into tags and text
@@ -44,18 +44,11 @@ const StepRow = (props) => {
              tagsText.push(<p style={{marginRight: "5px"}}>{wordArray[i]}</p>)    
         }
     }
-    return <div style={{display:'flex'}}>{tagsText}</div>
+    return <div id="tagsText">{tagsText}</div>
 
 }
 
-function HighlightedComponent(text, highlight) {
-    // Split text on highlight term, include term itself into parts, ignore case
-    const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
-    return <span>{parts.map(part => part.toLowerCase() === highlight.toLowerCase() ? <mark>{part}</mark> : part)}</span>;
-}
-  
-
-//a simple Table component
+//a "Table" component (dninclude)
 const Table = (props) => {
 
     //defining two variables we're passing into TableBody from the props
