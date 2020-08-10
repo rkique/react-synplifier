@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 //a table header ... idk if this might become useful 
 const TableHeader = () => {
+    return null;
 }
 
 //a StepsTable that displays StepRows in different rows
