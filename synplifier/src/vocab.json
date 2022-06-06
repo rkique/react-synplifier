@@ -1,22 +1,36 @@
 [
 {   "term":"inoculate",
-    "definition": "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop."}
+    "definition": "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop.",
+    "gloss": "Inoculating adds bacteria to broth to help them grow."
+}
 ,
 {   "term":"dilute",
-    "definition": "Diluting is adding more growth media to an initial culture"}
+    "definition": "Diluting is adding more growth media to an initial culture",
+    "gloss": ""
+}
 ,
 {   "term":"induce",
-    "definition": "Inducing is adding a certain reagent to trigger protein production in a culture"}
+    "definition": "Inducing is adding a certain reagent to trigger protein production in a culture",
+    "gloss": ""
+}
 ,
 {   "term":"pellet",
-    "definition": "Pelleting is running a centrifuge to separate bacteria from a culture"}
+    "definition": "Pelleting is running a centrifuge to separate bacteria from a culture",
+    "gloss": ""
+}
 ,
 {   "term":"suspend",
-    "definition": "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage."}
+    "definition": "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage.",
+    "gloss": ""
+}
 ,
 {   "term":"aliquot",
-    "definition": "Aliquoting is splitting a large amount of liquid into many smaller containers."}
+    "definition": "Aliquoting is splitting a large amount of liquid into many smaller containers.",
+    "gloss": ""
+}
 ,
 {   "term":"lyophilize",
-    "definition": "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes."}
+    "definition": "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes.",
+    "gloss": ""
+}
 ]

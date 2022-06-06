@@ -13,6 +13,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^2.1.8",
+    "typescript": "^4.7.3",
     "wink-pos-tagger": "^2.2.2"
   },
   "scripts": {

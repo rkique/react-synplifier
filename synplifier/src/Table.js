@@ -1,66 +1,64 @@
-import React, {Component} from 'react'
+import React from 'react'
+import vocab from './vocab.json'
 
-//a table header ... idk if this might become useful 
-const TableHeader = () => {
-    return null;
+const Table = (props) =>  {
+
+	//we want this Table to rerun each keystroke
+	let filteredVocab = vocab
+	console.log(`mySearch is ${props.mySearch}`)
+	let filteredBoldedVocab;
+
+	if(props.mySearch == ""){
+		//bold no part of string info.term
+		filteredVocab = vocab
+		filteredBoldedVocab = filteredVocab.map(info => {
+		let newInfo = {...info}
+		newInfo.term = [info.term,"", ""]
+		console.log(`newInfo.term ${newInfo.term}`)
+		return newInfo
+	})
+	}
+	else {
+	filteredVocab = vocab.filter(info => info.term.includes(props.mySearch))
+	//bold text within info.term that matches props.mySearch
+	filteredBoldedVocab = filteredVocab.map(info => {
+		//makes new copy
+		let newInfo = {...info}
+		newInfo.term = [newInfo.term.split(props.mySearch)[0],props.mySearch, newInfo.term.split(props.mySearch)[1]]
+		console.log(`newInfo.term ${newInfo.term}`)
+		return newInfo
+	})
+	}
+	console.log(filteredBoldedVocab)
+	const DisplayData = filteredBoldedVocab.map(
+		(info) => {
+			return (
+				<tr>
+					<td>{info.term[0]}<b>{info.term[1]}</b>{info.term[2]}</td>
+					<td>{info.definition}</td>
+				</tr>
+			)
+		}
+	)
+
+	return (
+		<div>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>term</th>
+						<th>definition</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					{DisplayData}
+
+				</tbody>
+			</table>
+
+		</div>
+	)
 }
 
-//a StepsTable that displays StepRows in different rows
-const StepsTable = (props) => {
-    let steps = props.steps;
-    var rows = []
-    for (var i =0; i<steps.length; i++)
-    {
-        let step = steps[i];
-        rows.push(<StepRow key={i} step={step}/>);
-    }
-    return <div className="stepsTable">{rows}</div>;
-}
-
-//a StepRow is a collection of tags and text objects (words) in a row (5px margin)
-const StepRow = (props) => {
-    //create a tag for each term within the scope of each step
-    //return a step split up into tags and text
-    var tagsText = []
-    //tags: word, def, index
-    var wordArray = props.step.job.split(" ");
-    for (var i = 0; i< wordArray.length; i++)
-    {
-        var foundTag = false;
-        for(var j = 0; j<props.step.tags.length;j++)
-        { 
-            if(wordArray[i].toLowerCase() == props.step.tags[j][0])
-            {
-                //append tag instead of text
-                tagsText.push(
-                <div class="cardTooltip">{wordArray[i]}
-                <span class="tooltiptext">{props.step.tags[j][1]}</span>
-                </div>)
-                foundTag = true;
-            }
-        }
-        if(foundTag == false)
-        {           
-            //since no tags were found, append text
-             tagsText.push(<p style={{marginRight: "5px"}}>{wordArray[i]}</p>)    
-        }
-    }
-    return <div id="tagsText">{tagsText}</div>
-
-}
-
-//a "Table" component (dninclude)
-const Table = (props) => {
-
-    //defining two variables we're passing into TableBody from the props
-    //the props are coming from the params we pass into Table 
-    const {steps, removeStep} = props
-    return (  
-            <div>
-            <TableHeader />
-            <StepsTable steps={steps} removeStep={removeStep}/>
-            </div>
-    )
-}
-
-export default Table
+export default Table;
