@@ -1,0 +1,22 @@
+[
+{   "term":"inoculate",
+    "definition": "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop."}
+,
+{   "term":"dilute",
+    "definition": "Diluting is adding more growth media to an initial culture"}
+,
+{   "term":"induce",
+    "definition": "Inducing is adding a certain reagent to trigger protein production in a culture"}
+,
+{   "term":"pellet",
+    "definition": "Pelleting is running a centrifuge to separate bacteria from a culture"}
+,
+{   "term":"suspend",
+    "definition": "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage."}
+,
+{   "term":"aliquot",
+    "definition": "Aliquoting is splitting a large amount of liquid into many smaller containers."}
+,
+{   "term":"lyophilize",
+    "definition": "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes."}
+]

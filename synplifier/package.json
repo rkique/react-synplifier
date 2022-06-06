@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.6.1",
     "fontsource-roboto": "^3.0.3",
+    "fuse.js": "^6.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^2.1.8",
