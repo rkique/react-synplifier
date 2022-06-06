@@ -1,1 +1,1 @@
-This is a react build of the Synplifier utility, eventually aiming to be run serverless with AWS. 
+This is a simple react app that I built two years ago that I'm repiecing again now.
