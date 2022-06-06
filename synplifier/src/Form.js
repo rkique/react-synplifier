@@ -7,7 +7,7 @@ class Form extends Component {
     //an empty protocol (text input by user)
     //an empty set of steps (converted from protocol)
     initialState = {
-        protocol: '',
+        protocol: 'dilute and aliquot the media\ninoculate the culture\npellet, suspend, lyophilize',
         steps: []
     }
     state = this.initialState

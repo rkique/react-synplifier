@@ -6,7 +6,16 @@ class App extends Component {
     state = {   
         steps:
              [
-            {job: "sterilize the workspace", tags: [["sterilize", "Sterilizing is cleaning the workspace with ethanol.", 0]]}
+            {job: "Sterilize the workspace.\n Dilute and aliquot the media. \nInoculate the culture.\n Pellet, suspend, lyophilize", tags: [
+                ["sterilize", "Sterilizing is cleaning the workspace with ethanol.", 0],
+                ["inoculate", "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop."]
+                ,["dilute", "Diluting is adding more growth media to an initial culture"]
+                ,["induce", "Inducing is adding a certain reagent to trigger protein production in a culture"]
+                ,["pellet", "Pelleting is running a centrifuge to separate bacteria from a culture"]
+                ,["suspend", "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage."]
+                ,["aliquot", "Aliquoting is splitting a large amount of liquid into many smaller containers."]
+                ,["lyophilize", "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes."]
+            ]}
             ]
     }
 
@@ -43,7 +52,7 @@ class App extends Component {
         const {steps} = this.state
         return (
             <div className="container">
-                <h1 style={{color: "red"}}>Synplifier v0.2</h1>
+                <p style={{fontSize: "10px"}}>(June 2022) Returning to this project after a bit (lol). I realize this does literally nothing as of right now. Wish I could find the terms.json file. Current plan is to add more terms, and some example protocols that highlight where synplifier could be useful. </p>
                 <div className="flex-row">
                     <div className="flex-large">
                     <Form handleSubmit={this.handleSubmit} style={{margin: "0 10px", visibility: "none"}}/>
