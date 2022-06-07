@@ -24,7 +24,9 @@ const Table = (props) =>  {
 	filteredBoldedVocab = filteredVocab.map(info => {
 		//makes new copy
 		let newInfo = {...info}
-		newInfo.term = [newInfo.term.split(props.mySearch)[0],props.mySearch, newInfo.term.split(props.mySearch)[1]]
+		let before = newInfo.term.split(props.mySearch)[0]
+		let after = newInfo.term.split(props.mySearch).slice(1).join(" ")
+		newInfo.term = [before,props.mySearch, after]
 		console.log(`newInfo.term ${newInfo.term}`)
 		return newInfo
 	})
