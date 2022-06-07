@@ -1,36 +1,249 @@
 [
-{   "term":"inoculate",
-    "definition": "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop.",
-    "gloss": "Inoculating adds bacteria to broth to help them grow."
-}
-,
-{   "term":"dilute",
-    "definition": "Diluting is adding more growth media to an initial culture",
-    "gloss": ""
-}
-,
-{   "term":"induce",
-    "definition": "Inducing is adding a certain reagent to trigger protein production in a culture",
-    "gloss": ""
-}
-,
-{   "term":"pellet",
-    "definition": "Pelleting is running a centrifuge to separate bacteria from a culture",
-    "gloss": ""
-}
-,
-{   "term":"suspend",
-    "definition": "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage.",
-    "gloss": ""
-}
-,
-{   "term":"aliquot",
-    "definition": "Aliquoting is splitting a large amount of liquid into many smaller containers.",
-    "gloss": ""
-}
-,
-{   "term":"lyophilize",
-    "definition": "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes.",
-    "gloss": ""
-}
+    {
+        "term": "inoculate",
+        "definition": "Inoculating is transferring bacteria from solution onto growth media, usually by a small streaking loop.",
+        "gloss": "Inoculating adds bacteria to broth to help them grow."
+    },
+    {
+        "term": "dilute",
+        "definition": "Diluting is adding more growth media to an initial culture",
+        "gloss": ""
+    },
+    {
+        "term": "induce",
+        "definition": "Inducing is adding a certain reagent to trigger protein production in a culture",
+        "gloss": ""
+    },
+    {
+        "term": "pellet",
+        "definition": "Pelleting is running a centrifuge to separate bacteria from a culture",
+        "gloss": ""
+    },
+    {
+        "term": "suspend",
+        "definition": "Suspending is adding a liquid, usually to a bacterial pellet, for long term storage.",
+        "gloss": ""
+    },
+    {
+        "term": "aliquot",
+        "definition": "Aliquoting is splitting a large amount of liquid into many smaller containers.",
+        "gloss": ""
+    },
+    {
+        "term": "lyophilize",
+        "definition": "Lyophilizing is like freeze-drying, and is used to preserve bacteria & enyzmes.",
+        "gloss": ""
+    },
+    {
+        "term": "DNA",
+        "definition": "linked nucleotides (deoxyribonucleic acid)"
+    },
+    {
+        "term": "flow cytometry",
+        "definition": "Looking at cells (or particles) while they flow past a laser (while suspended, in a buffered salt-based solution). (Each particle is analyzed for light scatter, and one or multiple fluorescence parameters. )"
+    },
+    {
+        "term": "cytometry",
+        "definition": "the science of cell measurement, which can include cell size, cell count, cell cycle and more"
+    },
+    {
+        "term": "codon",
+        "definition": "three nucleotides encoding for amino acids (or stop signals (signaling the termination of protein synthesis)). There are 4^3 = 64 of them (61 specify amino acids and 3 are used as stop signals)."
+    },
+    {
+        "term": "PCR",
+        "definition": "(polymerase chain reaction) (gene photocopying) making lots of DNA pieces cause its really hard to look at just one (heating and cooling over and over again allows for denaturing and annealing)"
+    },
+    {
+        "term": "nucleotide",
+        "definition": "the four molecules that make up DNA (adenine (A), thymine (T), guanine (G), and cytosine (C))"
+    },
+    {
+        "term": "endonuclease",
+        "definition": "enzyme that cuts within a DNA fragment."
+    },
+    {
+        "term": "exonuclease",
+        "definition": "enzyme that cuts the ends of a DNA fragment."
+    },
+    {
+        "term": "-ase",
+        "definition": "it's an enzyme!"
+    },
+    {
+        "term": "lysis",
+        "definition": "a breakdown, a spilling all over of cells"
+    },
+    {
+        "term": "lysis buffer",
+        "definition": "a liquid made for breaking down cells to extract proteins"
+    },
+    {
+        "term": "denaturing",
+        "definition": "a loss-of-shape, a sludgification, a meltdown; splitting strands in two"
+    },
+    {
+        "term": "ligase",
+        "definition": "an enzyme that joins strands"
+    },
+    {
+        "term": "polymerase",
+        "definition": "an enzyme that builds or copies strands from dNTPs"
+    },
+    {
+        "term": "ntp",
+        "definition": "nucleotides which build out RNA (nucleoside triphosphate)"
+    },
+    {
+        "term": "dNTPs",
+        "definition": "nucleotides which build out DNA (deoxyribonucleotide triphosphate)"
+    },
+    {
+        "term": "Pol I",
+        "definition": "first DNA polymerase discovered in E. coli"
+    },
+    {
+        "term": "reporter",
+        "definition": "a flag, a visible-marker-kind gene that expresses something we can find easily (GFP)"
+    },
+    {
+        "term": "promoter",
+        "definition": "DNA (upstream of a gene where relevant proteins (such as RNA polymerase and transcription factors) bind to)) that initiates transcription of a gene."
+    },
+    {
+        "term": "upstream",
+        "definition": "when it gets built before"
+    },
+    {
+        "term": "downstream",
+        "definition": "when it gets built after"
+    },
+    {
+        "term": "gibson assembly",
+        "definition": "seamless assembly of plasmid and multiple DNA fragments (using exonuclease, polymerase, ligase)"
+    },
+    {
+        "term": "plasmid",
+        "definition": "circular double-stranded DNA molecules, typically containing a few thousand base pairs, that replicate within the cell independently of the chromosomal DNA"
+    },
+    {
+        "term": "golden gate",
+        "definition": "seamless assembly of plasmid and multiple DNA fragments"
+    },
+    {
+        "term": "inducible",
+        "definition": "it's possible to turn off and on the creation, usually of proteins"
+    },
+    {
+        "term": "expression",
+        "definition": "(this really suffers from overlapping definitions, but it means) reading and building, growing products in the loosest sense"
+    },
+    {
+        "term": "operon",
+        "definition": "a function, does multiple things, a functioning unit, a gene sequence with a single promoter"
+    },
+    {
+        "term": "transcription",
+        "definition": "building the RNA copy from a DNA sequence"
+    },
+    {
+        "term": "GFP",
+        "definition": "a protein that glows bright green, or the gene that encodes for it (Gfp)"
+    },
+    {
+        "term": "strand displacement",
+        "definition": "the ability for a polymerase to displace DNA found during synthesis"
+    },
+    {
+        "term": "LAMP",
+        "definition": "Like PCR, makes lots of DNA copies from single fragments. Instead of denaturing (peeling DNA into two strands) beforehand, LAMP (and other isothermal amplification methods) uses a polymerase that simply displaces DNA as it goes. Because you don't have to heat the DNA, it can be done at a constant temperature. Also, it's more prolific. ((Loop-Mediated Isothermal Amplification) uses 6-8 primers vs PCR using 2, resulting in an exponentially higher yield)"
+    },
+    {
+        "term": "primer design",
+        "definition": "the art of choosing single-strand fragments (17-28 pairs in length) that act as zippers"
+    },
+    {
+        "term": "Bst polymerase",
+        "definition": "Heat-resistant polymerase like Taq, but strand-displacing as needed for LAMP."
+    },
+    {
+        "term": "Bst",
+        "definition": "bacillus stearothermophilus"
+    },
+    {
+        "term": "amplification",
+        "definition": "making lots of DNA pieces through PCR or LAMPlification"
+    },
+    {
+        "term": "template DNA",
+        "definition": "the DNA you want to copy"
+    },
+    {
+        "term": "Taq polymerase",
+        "definition": "heat-resistant polymerase used for PCR from a bacteria that loves heat."
+    },
+    {
+        "term": "heat-resistant",
+        "definition": "a protein that won't denature (fall apart) at high temperatures"
+    },
+    {
+        "term": "primers",
+        "definition": "single strands designed to bind (via complementarity) to DNA before the DNA you want to copy"
+    },
+    {
+        "term": "oligonucleotides",
+        "definition": "literally, many nucleotides (a short single strand of DNA)"
+    },
+    {
+        "term": "oligo",
+        "definition": "oligonucleotide"
+    },
+    {
+        "term": "complementarity",
+        "definition": "complementary (AT and CG) to an existing single strand, that will want to bind"
+    },
+    {
+        "term": "dNTP mix",
+        "definition": "a equal (equimolar) mix of dATP, dCTP, dGTP, and dTTP for making new DNA"
+    },
+    {
+        "term": "magnesium ion",
+        "definition": "enhances the bonding in PCR (Commonly delivered as a MgCl2 solution to PCR)."
+    },
+    {
+        "term": "buffer",
+        "definition": "a liquid that serves a passive role in a technique"
+    },
+    {
+        "term": "gel electrophoresis",
+        "definition": "A measurement that uses the negative charge of DNA fragments to get their sizes in base pairs by flinging fragments across a gel towards a positive end."
+    },
+    {
+        "term": "electrophoresis",
+        "definition": "literally, movement of charged particle in electric current."
+    },
+    {
+        "term": "antiparallel",
+        "definition": "parallel but oriented in opposite directions"
+    },
+    {
+        "term": "3'",
+        "definition": "downstream"
+    },
+    {
+        "term": "5'",
+        "definition": "upstream"
+    },
+    {
+        "term": "5' to 3'",
+        "definition": "the direction along a DNA strand which genes are read and built"
+    },
+    {
+        "term": "mRNA",
+        "definition": "the scrap copy of DNA created by transcription and used in translation"
+    },
+    {
+        "term": "translation",
+        "definition": "reading mRNA and building proteins"
+    }
 ]
